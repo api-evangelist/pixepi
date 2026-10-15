@@ -1,0 +1,54 @@
+{
+  "@context": {
+    "@vocab": "https://pixepi.com/schema#",
+    "schema": "https://schema.org/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "dcterms": "http://purl.org/dc/terms/",
+    "pixepi": "https://pixepi.com/schema#",
+    "Error": "pixepi:Error",
+    "ok": {
+      "@id": "pixepi:ok",
+      "@type": "xsd:boolean"
+    },
+    "error": {
+      "@id": "pixepi:error",
+      "@type": "xsd:string"
+    },
+    "code": {
+      "@id": "pixepi:code",
+      "@type": "xsd:string"
+    },
+    "request_id": {
+      "@id": "pixepi:request_id",
+      "@type": "xsd:string"
+    },
+    "Job": "pixepi:Job",
+    "id": {
+      "@id": "pixepi:id",
+      "@type": "xsd:integer"
+    },
+    "app": {
+      "@id": "pixepi:app",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "pixepi:status",
+      "@type": "xsd:string"
+    },
+    "progress": {
+      "@id": "pixepi:progress",
+      "@type": "xsd:integer"
+    },
+    "download_url": {
+      "@id": "pixepi:download_url",
+      "@type": "xsd:string"
+    }
+  },
+  "@type": "schema:Dataset",
+  "schema:name": "Pixepi API JSON-LD context",
+  "schema:description": "A JSON-LD @context for the objects Pixepi's own API contract declares: one class per component schema, one property per declared field, typed from the contract. Derived by script (derive-json-ld.py, 2026-10-15) from openapi/_original/pixepi-v1-openapi.json.",
+  "dcterms:created": "2026-10-15",
+  "dcterms:source": [
+    "openapi/_original/pixepi-v1-openapi.json"
+  ]
+}

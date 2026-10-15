@@ -1,28 +1,91 @@
 aid: pixepi
 name: Pixepi
-description: 'Pixepi is a company surfaced via the API Evangelist harvest backlog (source: new-submission)
-  and added to the network as a stub for full-pipeline profiling.'
+image: https://pixepi.com/og-image.png?app=core
+description: Pixepi provides practical online tools for PDFs, images, text and more, allowing users to process files via HTTP APIs without installing
+  software or signing up. The platform offers a range of utilities such as PDF conversion, image manipulation, and OCR, accessible through a bearer‑key
+  secured REST API. It targets developers needing quick, free‑tier access to common document processing tasks.
 url: https://raw.githubusercontent.com/api-evangelist/pixepi/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:new-submission
-x-tier: stub
-x-tier-reason: harvest
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-15 (modular-v1; was harvest)
 specificationVersion: '0.20'
 created: '2026-10-15'
 modified: '2026-10-15'
 tags:
 - Company
-apis: []
+- Tools
+- PDF
+- Image
+- API
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: Spectral
+  url: rules/pixepi-rules.yml
+- type: JSONLD
+  url: json-ld/pixepi-context.jsonld
+- type: Vocabulary
+  url: vocabulary/pixepi-vocabulary.yml
+- type: Conformance
+  url: conformance/pixepi-conformance.yml
+- type: DataModel
+  url: data-model/pixepi-data-model.yml
+- type: ErrorCatalog
+  url: errors/pixepi-problem-types.yml
+- type: Hosts
+  url: hosts/pixepi-hosts.yml
+- type: Vendors
+  url: vendors/pixepi-vendors.yml
+- type: TermsOfService
+  url: https://pixepi.com/terms
+- type: PrivacyPolicy
+  url: https://pixepi.com/privacy
+- type: Login
+  url: https://pixepi.com/login
+- type: APIReference
+  url: https://pixepi.com/developers
+- type: DomainSecurity
+  url: security/pixepi-domain-security.yml
 - type: Website
   url: https://pixepi.com
 - type: Documentation
   url: https://api.pixepi.com/api/v1
+apis:
+- name: Pixepi API
+  description: External developer API for Pixepi tools providing PDF, image and text processing.
+  humanURL: https://pixepi.com/developers
+  baseURL: https://api.pixepi.com
+  aid: pixepi:pixepi-api
+- aid: pixepi:pixepi-api-v1-api
+  name: Pixepi API V1 API
+  description: 'External developer API for Pixepi tools. Auth: Authorization: Bearer .'
+  humanURL: https://pixepi.com/developers
+  baseURL: https://api.pixepi.com
+  properties:
+  - type: OpenAPI
+    url: openapi/_original/pixepi-v1-openapi.json
+  - type: JSONSchema
+    url: json-schema/pixepi-job-schema.json
 x-submission-notes: PDF/image tools API, OpenAPI 3.1, bearer key, free tier
 x-submission-probe: root 200, openapi.json 200 json (15KB), soft-404 OK
 x-submitted-by: toprak1340.1@gmail.com (apis.io/add, 2026-10-15)
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-10-15'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://pixepi.com
+    status: 200
+x-enrichment:
+  date: '2026-10-15'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local
