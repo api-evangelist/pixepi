@@ -60,14 +60,40 @@ apis:
   humanURL: https://pixepi.com/developers
   baseURL: https://api.pixepi.com
   aid: pixepi:pixepi-api
-- aid: pixepi:pixepi-api-v1-api
-  name: Pixepi API V1 API
-  description: 'External developer API for Pixepi tools. Auth: Authorization: Bearer .'
+- aid: pixepi:pixepi-apps-api
+  name: Pixepi Apps API
+  description: The Apps API from Pixepi — 11 operation(s) for apps.
   humanURL: https://pixepi.com/developers
   baseURL: https://api.pixepi.com
+  tags:
+  - Apps
   properties:
   - type: OpenAPI
-    url: openapi/_original/pixepi-v1-openapi.json
+    url: openapi/pixepi-apps-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pixepi-job-schema.json
+- aid: pixepi:pixepi-jobs-api
+  name: Pixepi Jobs API
+  description: The Jobs API from Pixepi — 2 operation(s) for jobs.
+  humanURL: https://pixepi.com/developers
+  baseURL: https://api.pixepi.com
+  tags:
+  - Jobs
+  properties:
+  - type: OpenAPI
+    url: openapi/pixepi-jobs-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/pixepi-job-schema.json
+- aid: pixepi:pixepi-usage-api
+  name: Pixepi Usage API
+  description: The Usage API from Pixepi — 1 operation(s) for usage.
+  humanURL: https://pixepi.com/developers
+  baseURL: https://api.pixepi.com
+  tags:
+  - Usage
+  properties:
+  - type: OpenAPI
+    url: openapi/pixepi-usage-api-openapi.yml
   - type: JSONSchema
     url: json-schema/pixepi-job-schema.json
 x-submission-notes: PDF/image tools API, OpenAPI 3.1, bearer key, free tier

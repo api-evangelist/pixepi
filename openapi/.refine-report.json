@@ -1,0 +1,39 @@
+{
+  "provider": "pixepi",
+  "sources": [
+    "_original/pixepi-v1-openapi.json"
+  ],
+  "outputs": [
+    "pixepi-apps-api-openapi.yml",
+    "pixepi-jobs-api-openapi.yml",
+    "pixepi-usage-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "pixepi-v1-openapi.json: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "pixepi-v1-openapi.json: tagged paths GET /api/v1/apps -> Apps",
+    "pixepi-v1-openapi.json: tagged paths GET /api/v1/apps/{slug} -> Apps",
+    "pixepi-v1-openapi.json: tagged paths POST /api/v1/apps/{slug}/run -> Apps",
+    "pixepi-v1-openapi.json: tagged paths GET /api/v1/jobs/{id} -> Jobs",
+    "pixepi-v1-openapi.json: tagged paths GET /api/v1/jobs/{id}/download -> Jobs",
+    "pixepi-v1-openapi.json: tagged paths GET /api/v1/usage -> Usage",
+    "pixepi-v1-openapi.json: tagged paths GET /api/v1/apps/gelir-gider-defteri/categories -> Apps",
+    "pixepi-v1-openapi.json: tagged paths POST /api/v1/apps/gelir-gider-defteri/categories -> Apps",
+    "pixepi-v1-openapi.json: tagged paths POST /api/v1/apps/gelir-gider-defteri/categories/{id} -> Apps",
+    "pixepi-v1-openapi.json: tagged paths POST /api/v1/apps/gelir-gider-defteri/categories/{id}/archive -> Apps",
+    "pixepi-v1-openapi.json: tagged paths GET /api/v1/apps/gelir-gider-defteri/entries -> Apps",
+    "pixepi-v1-openapi.json: tagged paths POST /api/v1/apps/gelir-gider-defteri/entries -> Apps",
+    "pixepi-v1-openapi.json: tagged paths POST /api/v1/apps/gelir-gider-defteri/entries/{id} -> Apps",
+    "pixepi-v1-openapi.json: tagged paths POST /api/v1/apps/gelir-gider-defteri/entries/{id}/delete -> Apps",
+    "pixepi-v1-openapi.json: tagged paths GET /api/v1/apps/gelir-gider-defteri/summary -> Apps",
+    "pixepi-v1-openapi.json: tagged paths GET /api/v1/apps/gelir-gider-defteri/export.csv -> Apps",
+    "pixepi-v1-openapi.json: declared missing tag: Apps",
+    "pixepi-v1-openapi.json: declared missing tag: Jobs",
+    "pixepi-v1-openapi.json: declared missing tag: Usage",
+    "apis.yml register: written (+3 apis, 4 total)"
+  ],
+  "skipped": []
+}
